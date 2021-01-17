@@ -50,7 +50,7 @@
   gap: 15px;
   border-left: 7px solid var(--profile-container-inside-shadow-color);
   border-top: 7px solid var(--profile-container-inside-shadow-color);
-  overflow: hidden;
+  overflow: auto;
   filter: brightness(90%);
   justify-content: start;
 }
