@@ -12,13 +12,12 @@
 }
 .profile-container {
   display: grid;
-  grid-template-columns: 300px 1fr 5%;
+  grid-template-columns: 300px 1fr 1%;
   grid-template-rows: auto;
   grid-template-areas: "picture text sm";
   gap: 50px;
   background-color: var(--profile-container-color);
   height: 400px;
-  align-content: center;
   padding: 50px;
   margin-right: 15px;
   margin-bottom: 15px;
@@ -46,7 +45,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   background-color: var(--text-background);
   color: var(--text-color);
-  max-height: 300px;
+  height: 300px;
   padding: 10px;
   gap: 15px;
   border-left: 7px solid var(--profile-container-inside-shadow-color);
@@ -82,4 +81,35 @@ a.sm-link {
 a.sm-link:active {
   text-shadow: none;
   transform: translate(3px, 3px);
+}
+@media screen and (max-width: 992px) {
+  .profile-container {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "picture" "text" "sm";
+    min-height: 1050px;
+    margin-left: 10px;
+    justify-content: center;
+    gap: 25px;
+  }
+  .profile-pic {
+    justify-self: center;
+  }
+  .profile-text {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 600px;
+    gap: 5px;
+  }
+  .profile-sm {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "sm-link" "sm-link" "sm-link" "sm-link";
+    height: 100px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  a.sm-link {
+    margin: auto;
+  }
 }

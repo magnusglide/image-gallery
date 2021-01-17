@@ -26,7 +26,7 @@ body {
 }
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
 }
 li {
@@ -40,6 +40,7 @@ a.navlink {
   color: white;
   padding: 13px;
   border-bottom: 5px solid silver;
+  overflow: hidden;
 }
 a.navlink:hover {
   background-color: var(--background-color2);
@@ -67,4 +68,22 @@ a.sidelink:hover {
   color: white;
   padding: 13px;
   text-align: center;
+}
+@media screen and (max-width: 992px) {
+  a.navlink {
+    font-size: 18px;
+  }
+  .container {
+    grid-template-columns: 1;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+  }
+  .sidebar {
+    display: none;
+  }
+  .footer-text {
+    font-size: 18px;
+  }
 }
