@@ -33,7 +33,7 @@ function addImg() {
 
 var modal = document.getElementById("modal-id");
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+// var captionText = document.getElementById("caption");
 
 for (let i of document.getElementsByTagName("img")) {
   i.addEventListener("click", function () {
@@ -45,7 +45,7 @@ function showImg(img) {
   // console.log(img); //for testing
   modal.style.display = "block";
   modalImg.src = img.src;
-  captionText.innerHTML = img.alt;
+//   captionText.innerHTML = img.alt;
 }
 
 var span = document.getElementsByClassName("close")[0];
@@ -59,6 +59,14 @@ document.body.addEventListener("keydown", function (e) {
     modal.style.display = "none";
   }
 });
-modal.addEventListener("mousedown", function () {
-  modal.style.display = "none";
+// modal.addEventListener("mousedown", function () {
+//   modal.style.display = "none";
+// });
+modal.addEventListener("mousedown", function (e) {
+  if (modalImg.contains(e.target)) {
+    // Clicked in box
+  } else {
+    // Clicked outside the box
+    modal.style.display = "none";
+  }
 });
