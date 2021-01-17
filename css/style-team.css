@@ -52,6 +52,7 @@
   border-top: 7px solid var(--profile-container-inside-shadow-color);
   overflow: hidden;
   filter: brightness(90%);
+  justify-content: start;
 }
 .name {
   font-size: 35px;
@@ -97,9 +98,9 @@ a.sm-link:active {
   }
   .profile-text {
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 600px;
-    gap: 5px;
+    grid-template-rows: 70px 30px 1fr;
+    height: 580px;
+    gap: 10px;
   }
   .profile-sm {
     grid-template-columns: 25% 25% 25% 25%;
