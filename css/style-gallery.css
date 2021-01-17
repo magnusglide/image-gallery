@@ -12,8 +12,8 @@
 
 .image_container {
   display: grid;
-  width: 100%;
-  height: var(--image-container-height);
+  max-width: 100%;
+  max-height: var(--image-container-height);
   background-color: rgb(30, 30, 30);
   justify-content: center;
   align-items: center;
