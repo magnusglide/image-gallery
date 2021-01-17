@@ -1,0 +1,85 @@
+:root {
+  --background-color: rgb(54, 9, 9);
+  --profile-container-color: rgb(30, 30, 30);
+  --profile-container-shadow-color: rgb(20, 20, 20);
+  --profile-container-inside-shadow-color: rgb(15, 15, 15);
+  --text-color: rgb(192, 140, 98);
+  --text-background: rgb(248, 244, 204);
+  --link-shadow: rgb(110, 85, 64);
+}
+.main {
+  grid-area: main;
+}
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px 1fr 5%;
+  grid-template-rows: auto;
+  grid-template-areas: "picture text sm";
+  gap: 50px;
+  background-color: var(--profile-container-color);
+  height: 400px;
+  align-content: center;
+  padding: 50px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 1px 1px 1px var(--profile-container-shadow-color),
+    2px 2px 1px var(--profile-container-shadow-color),
+    3px 3px 1px var(--profile-container-shadow-color),
+    4px 4px 1px var(--profile-container-shadow-color),
+    5px 5px 1px var(--profile-container-shadow-color),
+    6px 6px 1px var(--profile-container-shadow-color),
+    7px 7px 1px var(--profile-container-shadow-color);
+}
+.profile-pic {
+  grid-area: picture;
+  max-width: 300px;
+  max-height: 300px;
+  border-left: 7px solid var(--profile-container-inside-shadow-color);
+  border-top: 7px solid var(--profile-container-inside-shadow-color);
+  filter: brightness(90%);
+}
+.profile-text {
+  grid-area: text;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: var(--text-background);
+  color: var(--text-color);
+  max-height: 300px;
+  padding: 10px;
+  gap: 15px;
+  border-left: 7px solid var(--profile-container-inside-shadow-color);
+  border-top: 7px solid var(--profile-container-inside-shadow-color);
+  overflow: hidden;
+  filter: brightness(90%);
+}
+.name {
+  font-size: 35px;
+}
+.job {
+  font-size: 30px;
+}
+.text {
+  text-align: justify;
+  font-size: 18px;
+}
+.profile-sm {
+  grid-area: sm;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 75px 75px 75px 75px;
+  justify-content: center;
+  height: 300px;
+  font-size: 20px;
+  gap: 13px;
+}
+a.sm-link {
+  color: var(--text-color);
+  text-shadow: 1px 1px 1px var(--link-shadow), 2px 2px 1px var(--link-shadow),
+    3px 3px 1px var(--link-shadow);
+}
+a.sm-link:active {
+  text-shadow: none;
+  transform: translate(3px, 3px);
+}

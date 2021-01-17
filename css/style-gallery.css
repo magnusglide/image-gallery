@@ -1,0 +1,24 @@
+:root {
+  --image-container-height: 230px;
+}
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.image_container {
+  display: grid;
+  width: 100%;
+  height: var(--image-container-height);
+  background-color: rgb(30, 30, 30);
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  max-height: var(--image-container-height);
+  border: 1px solid gold;
+}
