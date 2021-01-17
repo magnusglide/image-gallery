@@ -7,6 +7,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 10px;
+  margin-right: 10px;
 }
 
 .image_container {
@@ -21,4 +22,12 @@ img {
   max-width: 100%;
   max-height: var(--image-container-height);
   border: 1px solid gold;
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    margin-right: 5px;
+    margin-left: 5px;
+    gap: 5px;
+  }
 }
