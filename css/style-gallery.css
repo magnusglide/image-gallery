@@ -20,7 +20,7 @@
 }
 img {
   max-width: 100%;
-  height: var(--image-container-height);
+  max-height: var(--image-container-height);
   border: 1px solid gold;
   cursor: pointer;
 }
