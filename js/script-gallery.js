@@ -1,6 +1,6 @@
 var images = [];
 for (var i = 1; i <= 20; i++) {
-  images[i - 1] = "/images/" + i + ".jpg";
+  images[i - 1] = "https://magnusglide.github.io/image-gallery/images/" + i + ".jpg";
 }
 
 async function addImgContainer() {
