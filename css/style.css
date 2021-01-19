@@ -74,7 +74,7 @@ a.sidelink:hover {
     font-size: 18px;
   }
   .container {
-    grid-template-columns: 1;
+    grid-template-columns: 100%;
     grid-template-areas:
       "header header"
       "main main"
