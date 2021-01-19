@@ -1,10 +1,13 @@
-var images = [];
+var resized_images = [];
+var fullGitHubLink = "https://magnusglide.github.io/image-gallery/images/";
 for (var i = 1; i <= 20; i++) {
-  images[i - 1] = "https://magnusglide.github.io/image-gallery/images/" + i + ".jpg";
+  resized_images[i - 1] =
+    "https://magnusglide.github.io/image-gallery/resized_images/" + i + ".jpg";
+  // "/resized_images/" + i + ".jpg";
 }
 
 async function addImgContainer() {
-  for (x in images) {
+  for (x in resized_images) {
     var div = document.createElement("div");
     document.getElementsByClassName("main")[0].appendChild(div);
     div.className = "image_container";
@@ -17,15 +20,11 @@ addImgContainer().then(addImg());
 // });
 
 function addImg() {
-  for (x in images) {
+  for (x in resized_images) {
     var img = document.createElement("img");
-    img.src = images[x];
+    img.src = resized_images[x];
     img.alt = x;
     document.getElementsByClassName("image_container")[x].appendChild(img);
-    img.addEventListener("click", function () {
-      showImg(img);
-    });
-    // console.log(images[x]); //for testing
   }
 }
 
@@ -37,15 +36,19 @@ var modalImg = document.getElementById("img01");
 
 for (let i of document.getElementsByTagName("img")) {
   i.addEventListener("click", function () {
-    showImg(i);
+    showImg(i.src);
   });
 }
 
-function showImg(img) {
-  // console.log(img); //for testing
+function showImg(imgSrc) {
   modal.style.display = "block";
-  modalImg.src = img.src;
-//   captionText.innerHTML = img.alt;
+  var indexOfImg = imgSrc.search("resized_images");
+  indexOfImg = indexOfImg + 15;
+  var imgSrcSubStr = imgSrc.substring(indexOfImg);
+  modalImg.src = fullGitHubLink + imgSrcSubStr;
+  // modalImg.src = "/images/" + imgSrcSubStr;
+
+  //   captionText.innerHTML = img.alt;
 }
 
 var span = document.getElementsByClassName("close")[0];
