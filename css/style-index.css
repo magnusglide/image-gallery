@@ -1,7 +1,7 @@
 h1,
-p {
+.text {
   color: white;
   font-family: "Times New Roman", Times, serif;
-  padding: 20px;
-  text-align: center;
+  padding: 30px;
+  text-align: start;
 }
