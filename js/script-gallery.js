@@ -33,9 +33,11 @@ var modal = document.getElementById("modal-id");
 var modalImg = document.getElementById("img01");
 
 for (let i of document.getElementsByTagName("img")) {
-  i.addEventListener("click", function () {
-    showImg(i.src);
-  });
+  if (i.id != "img01") {
+    i.addEventListener("click", function () {
+      showImg(i.src);
+    });
+  }
 }
 
 function showImg(imgSrc) {
